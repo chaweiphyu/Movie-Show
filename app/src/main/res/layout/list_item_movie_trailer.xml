@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/fl_movie"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/image_detail_height"
+    android:layout_marginStart="@dimen/margin_median">
+
+    <ImageView
+        android:id="@+id/iv_movie_trailer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_detail_height"
+        android:src="@drawable/the_nun"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv_play_movie"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+
+</FrameLayout>

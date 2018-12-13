@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MovieDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_median"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/iv_movie_detail"
+            android:layout_width="@dimen/image_detail_width"
+            android:layout_height="@dimen/image_detail_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/the_nun" />
+
+        <TextView
+            android:id="@+id/tv_tag_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_movie_detail"
+            android:paddingLeft="@dimen/margin_median"
+            android:text="The Num"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/iv_movie_detail"
+            android:layout_below="@id/tv_tag_line"
+            android:layout_toEndOf="@id/iv_movie_detail">
+
+            <TextView
+                android:id="@+id/tv_movie_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_median"
+                android:paddingTop="@dimen/margin_median"
+                android:text="A love story between Captain Yoo Shi Jin, Korean Special Forces, and Doctor Kang Mo Yeon, surgeon at Haesung Hospital. Together they face danger in a war-torn country.
+A love story between Captain Yoo Shi Jin, Korean Special Forces, and Doctor Kang Mo Yeon, surgeon at Haesung Hospital. Together they face danger in a war-torn country."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_desc" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_release_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_median"
+        android:paddingTop="@dimen/margin_median"
+        android:text="Released : January 2018"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_large"
+        android:paddingEnd="@dimen/margin_median"
+        android:paddingTop="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_large"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:text="The num"
+        android:textSize="@dimen/movie_title"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_movie_genres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_median"
+        android:layout_marginStart="@dimen/margin_median"
+        android:layout_marginBottom="@dimen/margin_median" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 hrs 14 mins"
+        android:padding="@dimen/margin_median"
+        android:layout_marginStart="@dimen/margin_large"
+        android:textSize="@dimen/text_desc"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_movie_trailer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_median"
+        android:paddingEnd="@dimen/margin_median"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
